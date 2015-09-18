@@ -1,7 +1,7 @@
 package responsetime
 
 import (
-    "github.com/goforgery/forgery2"
+	"github.com/goforgery/forgery2"
 	"strconv"
 	"time"
 )
@@ -10,7 +10,7 @@ import (
 //
 // Example:
 //
-//    stackr.CreateServer().Use(stackr.ResponseTime())
+//    f.CreateServer().Use(responsetime.Create())
 func Create() func(*f.Request, *f.Response, func()) {
 	return func(req *f.Request, res *f.Response, next func()) {
 		start := time.Now().UnixNano()
