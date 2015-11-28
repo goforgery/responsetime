@@ -6,7 +6,22 @@ Response time logger for Forgery2.
 
 ## Use
 
-    responsetime.Create()
+Sets the header `X-Response-Time` with the time in milliseconds that __Forgery2__ took to process the request.
+
+```javascript
+package main
+
+import (
+	"github.com/goforgery/forgery2"
+	"github.com/goforgery/responsetime"
+)
+
+func main() {
+	app := f.CreateApp()
+	app.Use(responsetime.Create())
+	app.Listen(3000)
+}
+```
 
 ## Test
 
