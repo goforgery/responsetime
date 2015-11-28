@@ -4,6 +4,10 @@
 
 Response time logger for Forgery2.
 
+## Install
+
+	go get github.com/goforgery/responsetime
+
 ## Use
 
 Sets the header `X-Response-Time` with the time in milliseconds that __Forgery2__ took to process the request.
